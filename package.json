@@ -2,6 +2,10 @@
   "name": "worldpulse-react",
   "version": "1.0.0",
   "description": "WorldPulse — Real-time news portal with live ticker and category browsing",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
