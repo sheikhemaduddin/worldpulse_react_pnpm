@@ -1,0 +1,38 @@
+const now = new Date();
+const ago = (h) => new Date(now - h * 3600000).toISOString();
+
+export const ARTICLES = [
+  { id:"a1", category:"world", title:"World Leaders Convene for Emergency Climate Summit in Geneva", excerpt:"Representatives from 190 countries gathered in Geneva on Monday as scientists warned that immediate action is required to prevent irreversible climate tipping points by 2035.", author:"Sarah Mitchell", authorImg:"https://i.pravatar.cc/40?img=1", readTime:5, views:142000, image:"https://images.unsplash.com/photo-1569163139394-de4e5f43e5ca?w=800&q=80", publishedAt:ago(1), breaking:true, tags:["Climate","Politics","UN"] },
+  { id:"a2", category:"technology", title:"OpenAI Announces GPT-5 with Unprecedented Reasoning Capabilities", excerpt:"The latest model demonstrates near-human performance across scientific reasoning, mathematical proofs, and complex multi-step planning tasks in controlled benchmarks.", author:"James Chen", authorImg:"https://i.pravatar.cc/40?img=3", readTime:7, views:328000, image:"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80", publishedAt:ago(2), breaking:true, tags:["AI","Tech","OpenAI"] },
+  { id:"a3", category:"business", title:"Tesla Reports Record Q4 Deliveries, Stock Surges 12% Pre-Market", excerpt:"The electric vehicle manufacturer delivered 502,000 vehicles in Q4, beating analyst expectations of 480,000 amid production ramp-up at its Berlin and Texas gigafactories.", author:"Emily Rodriguez", authorImg:"https://i.pravatar.cc/40?img=5", readTime:4, views:98000, image:"https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80", publishedAt:ago(3), breaking:false, tags:["Tesla","EV","Markets"] },
+  { id:"a4", category:"science", title:"NASA Confirms Evidence of Ancient Liquid Water Ocean on Mars", excerpt:"New analysis of Perseverance rover data reveals geochemical signatures consistent with a sustained saltwater ocean that covered 30% of Mars's northern hemisphere 3.7 billion years ago.", author:"Dr. Marcus Webb", authorImg:"https://i.pravatar.cc/40?img=7", readTime:8, views:215000, image:"https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=800&q=80", publishedAt:ago(4), breaking:false, tags:["NASA","Mars","Space"] },
+  { id:"a5", category:"sports", title:"Manchester City Clinch Premier League Title in Dramatic Final Day", excerpt:"A last-minute Erling Haaland penalty secured City's sixth Premier League title in eight years, finishing one point ahead of Arsenal who drew with Everton at Goodison Park.", author:"Paul Fletcher", authorImg:"https://i.pravatar.cc/40?img=9", readTime:3, views:541000, image:"https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=800&q=80", publishedAt:ago(5), breaking:false, tags:["Football","Premier League","Man City"] },
+  { id:"a6", category:"health", title:"Breakthrough mRNA Vaccine Shows 94% Efficacy Against Multiple Cancer Types", excerpt:"Phase III trial results published in Nature Medicine demonstrate that personalized mRNA vaccines, when combined with immunotherapy, significantly reduce recurrence in melanoma and lung cancer patients.", author:"Dr. Lisa Park", authorImg:"https://i.pravatar.cc/40?img=11", readTime:9, views:189000, image:"https://images.unsplash.com/photo-1584634428564-34c52d41a58a?w=800&q=80", publishedAt:ago(6), breaking:true, tags:["Cancer","mRNA","Medicine"] },
+  { id:"a7", category:"technology", title:"Apple Vision Pro 2 Unveiled with Holographic Display and All-Day Battery", excerpt:"Apple's next-generation spatial computing headset features a new micro-OLED holographic panel, 40% lighter design, and a full 12-hour battery — addressing the key criticisms of the original.", author:"Thomas King", authorImg:"https://i.pravatar.cc/40?img=13", readTime:6, views:412000, image:"https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&q=80", publishedAt:ago(8), breaking:false, tags:["Apple","AR/VR","Hardware"] },
+  { id:"a8", category:"world", title:"Ukraine Ceasefire Negotiations Resume in Istanbul With New Framework", excerpt:"Delegations from Kyiv and Moscow returned to the negotiating table under Turkish mediation, with a proposed 90-day ceasefire framework gaining cautious support from both sides.", author:"Anna Kowalski", authorImg:"https://i.pravatar.cc/40?img=15", readTime:6, views:276000, image:"https://images.unsplash.com/photo-1547223112-6a0f79a46a2a?w=800&q=80", publishedAt:ago(10), breaking:false, tags:["Ukraine","Peace","Diplomacy"] },
+  { id:"a9", category:"business", title:"Amazon Launches Drone Delivery Service in 50 US Cities", excerpt:"Amazon Prime Air has expanded its autonomous drone delivery network to cover 50 major US metropolitan areas, promising 30-minute delivery for packages under 5 pounds.", author:"Rachel Green", authorImg:"https://i.pravatar.cc/40?img=17", readTime:4, views:88000, image:"https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&q=80", publishedAt:ago(12), breaking:false, tags:["Amazon","Drones","Logistics"] },
+  { id:"a10", category:"science", title:"CRISPR Gene Therapy Cures Sickle Cell Disease in 42 of 45 Patients", excerpt:"A landmark five-year follow-up study confirms that a single CRISPR-Cas9 treatment provided durable remission in over 93% of participants, representing a potential cure for the hereditary blood disorder.", author:"Dr. Kevin Moore", authorImg:"https://i.pravatar.cc/40?img=19", readTime:7, views:165000, image:"https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80", publishedAt:ago(14), breaking:false, tags:["CRISPR","Gene Therapy","Medicine"] },
+  { id:"a11", category:"sports", title:"Serena Williams Returns from Retirement to Win Wimbledon Wildcard Spot", excerpt:"In a shocking announcement, the 23-time Grand Slam champion confirmed she will compete at this year's Wimbledon on a wildcard, ending a three-year retirement at age 44.", author:"Daniel Evans", authorImg:"https://i.pravatar.cc/40?img=21", readTime:3, views:623000, image:"https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=800&q=80", publishedAt:ago(16), breaking:false, tags:["Tennis","Wimbledon","Serena"] },
+  { id:"a12", category:"health", title:"WHO Declares End of COVID-19 as a Global Health Emergency", excerpt:"The World Health Organization formally closed the public health emergency designation, marking the official end of the three-year global health crisis that claimed over 7 million lives worldwide.", author:"Marco Rossi", authorImg:"https://i.pravatar.cc/40?img=23", readTime:5, views:892000, image:"https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800&q=80", publishedAt:ago(20), breaking:false, tags:["COVID","WHO","Health"] },
+];
+
+export const CATEGORIES = [
+  { slug:"all", label:"All", color:"#6366f1" },
+  { slug:"world", label:"World", color:"#0ea5e9" },
+  { slug:"technology", label:"Technology", color:"#8b5cf6" },
+  { slug:"business", label:"Business", color:"#f59e0b" },
+  { slug:"science", label:"Science", color:"#10b981" },
+  { slug:"sports", label:"Sports", color:"#ef4444" },
+  { slug:"health", label:"Health", color:"#ec4899" },
+];
+
+export const TICKER_ITEMS = [
+  "BREAKING: G7 Leaders Agree on New AI Safety Framework",
+  "Markets: S&P 500 hits new all-time high of 5,890 points",
+  "Tech: Google unveils Gemini Ultra 2.0 with 2M token context",
+  "Sports: LeBron James becomes first NBA player to score 50,000 career points",
+  "Science: Webb Telescope detects potential biosignatures on exoplanet K2-18b",
+  "Business: Apple market cap crosses $4 trillion milestone",
+  "World: India surpasses China as world's largest economy by 2031, IMF projects",
+  "Health: FDA approves first Alzheimer's disease-modifying drug",
+];
