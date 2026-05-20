@@ -72,7 +72,7 @@ export default function Home() {
     <div>
       <div style={{display:"grid",gridTemplateColumns:"2fr 1fr",gap:24,marginBottom:32}}>
         <div style={{position:"relative"}}>
-          <h2 style={{margin:"0 0 16px",fontSize:18,fontWeight:700,display:"flex",alignItems:"center",gap:8}}><Flame size={20} color="#dc2626"/> Breaking News</h2>
+          <h2 style={{margin:"0 0 16px",fontSize:18,fontWeight:700,display:"flex",alignItems:"center",gap:8}}><Flame size={20} color="#dc2626"/> Break Test News</h2>
           <div style={{display:"grid",gap:16}}>
             {breaking.map((a,i)=><div key={a.id} style={{position:"relative"}}><ArticleCard article={a} size={i===0?"large":"medium"}/></div>)}
           </div>
